@@ -1,0 +1,79 @@
+/* 
+Main color: #F25C5C
+Footer Color: #000000
+Overlay Colors: #F25C5C at 65%
+                #5C44F2
+                #E69BE5
+                #FF8C00
+*/
+
+*{ 
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero */
+nav {
+    display: flex;
+    justify-content: end;
+    gap: 80px;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+a:link {
+    font-family: "sora", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #F25C5C;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    
+}
+
+.backgroundBox {
+    width: 44.3%;
+    height: 100%;
+    background-color: #F25C5C;
+    position: absolute;
+    z-index: -1;
+    margin-left: 2%;
+    /* margin-top: 2%; */
+    
+}
+
+.heroText {
+    font-family: 'Sora', sans-serif;
+    font-size: 125px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    width: 415px;
+    height: 251px;
+    
+}
+
+.period {
+    color: #F25C5C;
+}
+
+/* About */
+
+
+/* Work */
+
+
+
+
+ /* Contact */
+
+
+ /* Footer */
+
+/* Resume */
+
+ /*  */
