@@ -64,8 +64,8 @@ nav {
 /* Work */
 
 .workExamples {
-  margin-left: 100px;
-  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .workText {
@@ -99,29 +99,6 @@ nav {
 .card-content {
   padding: 1.5em;
   background: linear-gradient(rgba(242, 92, 92, 0), rgba(242, 92, 92, 1));
-  transform: translateY(55%);
-  transition: transform 500ms ease;
-}
-
-/* animates card content up into view on hover */
-.card:hover .card-content,
-.card:focus-within .card-content {
-  transform: translateY(0);
-}
-
-/* animation for tabbing in */
-.card:focus-within .card-content {
-  transition-duration: 0ms;
-}
-
-.card-content > *:not(.card-title) {
-  opacity: 0;
-  transition: opacity 500ms linear;
-}
-
-.card:hover .card-content > *,
-.card:focus-within .card-content > * {
-  opacity: 1;
 }
 
 .card-title {
@@ -137,7 +114,6 @@ nav {
   bottom: -2px;
   width: 100%;
   background: #f25c5c;
-  transform: scaleX(0);
 
   transform-origin: left;
   transition: transform 500ms ease;
@@ -150,6 +126,38 @@ nav {
 
 .card-body {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* if primary device can hover do this if not the animation will have been done already */
+@media (hover) {
+  .card-content {
+    transform: translateY(55%);
+    transition: transform 500ms ease;
+  }
+  /* animates card content up into view on hover */
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+  }
+
+  /* animation for tabbing in */
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-content > *,
+  .card:focus-within .card-content > * {
+    opacity: 1;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
 }
 
 .button {
