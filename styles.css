@@ -51,10 +51,7 @@ nav {
   height: 100%;
   /* background-color: #f25c5c; */
   background-size: 400%;
-  background-image: linear-gradient(
-      to right,
-      #f25c5c,
-      #f4d46c)      ;
+  background-image: linear-gradient(to right, #f25c5c, #f4d46c);
   position: absolute;
   z-index: -1;
   margin-left: 2%;
@@ -64,10 +61,10 @@ nav {
 
 @keyframes bg-animation {
   0% {
-    background-position:left;
+    background-position: left;
   }
   100% {
-    background-position:right;
+    background-position: right;
   }
 }
 
@@ -311,8 +308,6 @@ nav {
   background-color: #f19090;
 }
 
-
-
 /* Footer */
 
 .footContainer {
@@ -361,4 +356,35 @@ nav {
 }
 /* Resume */
 
-/*  */
+/* Mobile Build */
+
+@media (max-width: 872px) {
+  .workRow1,
+  .workRow2 {
+    flex-direction: column;
+  }
+
+  .heroText {
+    font-size: 100px;
+    margin-left: 50px;
+  }
+
+  nav {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 29px;
+  }
+
+  .footContainer {
+    line-height: 2;
+    font-size: 16px;
+  }
+
+  .footerMail {
+    font-size: 26px;
+  }
+}
