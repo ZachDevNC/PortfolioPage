@@ -34,7 +34,8 @@ nav {
 
 .navLinks {
   font-family: "sora", sans-serif;
-  font-size: 16px;
+  font-weight: 800;
+  font-size: 14px;
   text-decoration: none;
   color: #f25c5c;
 }
@@ -48,16 +49,31 @@ nav {
 .backgroundBox {
   width: 47.7%;
   height: 100%;
-  background-color: #f25c5c;
+  /* background-color: #f25c5c; */
+  background-size: 400%;
+  background-image: linear-gradient(
+      to right,
+      #f25c5c,
+      #f4d46c)      ;
   position: absolute;
   z-index: -1;
   margin-left: 2%;
   /* margin-top: 2%; */
+  animation: bg-animation 7s ease-in-out infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position:left;
+  }
+  100% {
+    background-position:right;
+  }
 }
 
 .heroText {
   font-family: "Sora", sans-serif;
-  font-size: 125px;
+  font-size: 130px;
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
@@ -71,17 +87,13 @@ nav {
 
 /* About */
 
-.aboutContainer {
-  max-width: 50%;
-}
-
-.about {
+/* .about {
   display: flex;
   justify-content: center;
-  margin-top:  -3%;
+  margin-top: 15%;
   line-height: 1.5;
-  color: white;
-}
+  color: #f25c5c;
+} */
 
 /* Work */
 
@@ -299,6 +311,8 @@ nav {
   background-color: #f19090;
 }
 
+
+
 /* Footer */
 
 .footContainer {
@@ -313,7 +327,6 @@ nav {
   color: white;
   text-align: center;
   font-size: 48px;
-  /* margin-top: 10px; */
 }
 
 .footerText2 {
