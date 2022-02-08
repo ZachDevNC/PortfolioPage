@@ -22,8 +22,9 @@ nav {
   display: flex;
   justify-content: end;
   gap: 80px;
-  padding: 20px;
+  padding:30px 20px 20px 20px;
   margin-right: 50px;
+  
   background: white;
 }
 
