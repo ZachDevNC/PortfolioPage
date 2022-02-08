@@ -13,6 +13,10 @@ Overlay Colors: #F25C5C at 65%
   /* box-sizing: border-box; */
 }
 
+body {
+  font-family: "sora", sans-serif;
+}
+
 /* Hero */
 nav {
   display: flex;
@@ -20,14 +24,15 @@ nav {
   gap: 80px;
   padding: 20px;
   margin-right: 50px;
+  background: white;
 }
 
-/* a:link {
+.navLinks {
   font-family: "sora", sans-serif;
   font-size: 16px;
   text-decoration: none;
   color: #f25c5c;
-} */
+}
 
 .header {
   display: flex;
@@ -36,7 +41,7 @@ nav {
 }
 
 .backgroundBox {
-  width: 44.3%;
+  width: 47.7%;
   height: 100%;
   background-color: #f25c5c;
   position: absolute;
@@ -63,37 +68,96 @@ nav {
 
 /* Work */
 
-.workExamples {
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
 .workText {
+  display: flex;
+  justify-content: center;
   font-family: "sora", sans-serif;
   font-size: 48px;
-  margin-left: 50%;
-  margin-right: 50%;
   margin-top: 250px;
 }
 
+.workRow1,
+.workRow2 {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 40px;
+}
+
 .card {
+  font-weight: 200;
   line-height: 2;
   max-width: 600px;
+  width: 100%;
   /* height: 350px; */
   color: white;
   background-image: url(/images/christian.jpg);
   background-size: cover;
-  padding: 18rem 0 0;
+  padding: 12rem 0 0;
   border-radius: 0.35rem;
   overflow: hidden;
 
   transition: transform 300ms ease;
 }
 
+.card2 {
+    font-weight: 200;
+    line-height: 2;
+    max-width: 600px;
+    width: 100%;
+    /* height: 350px; */
+    color: white;
+    background-image: url(/images/viciouscycles2.png);
+    background-size: cover;
+    padding: 12rem 0 0;
+    border-radius: 0.35rem;
+    overflow: hidden;
+  
+    transition: transform 300ms ease;
+  }
+
+.card3 {
+    font-weight: 200;
+    line-height: 2;
+    max-width: 600px;
+    width: 100%;
+    /* height: 350px; */
+    color: white;
+    background-image: url(/images/scrib2.png);
+    background-size: cover;
+    padding: 12rem 0 0;
+    border-radius: 0.35rem;
+    overflow: hidden;
+  
+    transition: transform 300ms ease;
+  }
+
+.card4 {
+    font-weight: 200;
+    line-height: 2;
+    max-width: 600px;
+    width: 100%;
+    /* height: 350px; */
+    color: white;
+    background-image: url(/images/todo2.png);
+    background-size: cover;
+    padding: 12rem 0 0;
+    border-radius: 0.35rem;
+    overflow: hidden;
+  
+    transition: transform 300ms ease;
+  }
+
 /* Makes the card size scale up slightly on hover or tab */
 .card:hover,
-.card:focus-within {
-  transform: scale(1.005);
+.card:focus-within,
+.card2:hover,
+.card2:focus-within,
+.card3:hover,
+.card3:focus-within,
+.card4:hover,
+.card4:focus-within {
+  transform: scale(1.01);
 }
 
 .card-content {
@@ -101,11 +165,27 @@ nav {
   background: linear-gradient(rgba(242, 92, 92, 0), rgba(242, 92, 92, 1));
 }
 
+.card-content2 {
+  padding: 1.5em;
+  background: linear-gradient(rgba(242, 92, 92, 0), rgba(92, 71, 221, 1));
+}
+
+.card-content3 {
+  padding: 1.5em;
+  background: linear-gradient(rgba(242, 92, 92, 0), rgba(234, 172, 233, 1));
+}
+
+.card-content4 {
+  padding: 1.5em;
+  background: linear-gradient(rgba(242, 92, 92, 0), rgba(255, 148, 18, 1));
+}
+
 .card-title {
   position: relative;
   width: max-content;
 }
 
+/* bar animation and styling */
 .card-title::after {
   content: "";
   position: absolute;
@@ -116,11 +196,17 @@ nav {
   background: #f25c5c;
 
   transform-origin: left;
-  transition: transform 500ms ease;
+  transition: transform 700ms ease;
 }
 
 .card:hover .card-title::after,
-.card:focus-within .card-title::after {
+.card:focus-within .card-title::after,
+.card2:hover .card-title::after,
+.card2:focus-within .card-title::after,
+.card3:hover .card-title::after,
+.card3:focus-within .card-title::after,
+.card4:hover .card-title::after,
+.card4:focus-within .card-title::after {
   transform: scaleX(1);
 }
 
@@ -130,28 +216,49 @@ nav {
 
 /* if primary device can hover do this if not the animation will have been done already */
 @media (hover) {
-  .card-content {
+  .card-content,
+  .card-content2,
+  .card-content3,
+  .card-content4 {
     transform: translateY(55%);
     transition: transform 500ms ease;
   }
   /* animates card content up into view on hover */
   .card:hover .card-content,
-  .card:focus-within .card-content {
+  .card:focus-within .card-content,
+  .card2:hover .card-content2,
+  .card2:focus-within .card-content2,
+  .card3:hover .card-content3,
+  .card3:focus-within .card-content3,
+  .card4:hover .card-content4,
+  .card4:focus-within .card-content4 {
     transform: translateY(0);
   }
 
   /* animation for tabbing in */
-  .card:focus-within .card-content {
+  .card:focus-within .card-content,
+  .card2:focus-within .card-content2,
+  .card3:focus-within .card-content3,
+  .card4:focus-within .card-content4 {
     transition-duration: 0ms;
   }
 
-  .card-content > *:not(.card-title) {
+  .card-content > *:not(.card-title),
+  .card-content2 > *:not(.card-title),
+  .card-content3 > *:not(.card-title),
+  .card-content4 > *:not(.card-title) {
     opacity: 0;
     transition: opacity 500ms linear;
   }
 
   .card:hover .card-content > *,
-  .card:focus-within .card-content > * {
+  .card:focus-within .card-content > *,
+  .card2:hover .card-content2 > *,
+  .card2:focus-within .card-content2 > *,
+  .card3:hover .card-content3 > *,
+  .card3:focus-within .card-content3 > *,
+  .card4:hover .card-content4 > *,
+  .card4:focus-within .card-content4 > * {
     opacity: 1;
   }
 
@@ -175,9 +282,28 @@ nav {
   background-color: #f19090;
 }
 
-/* Contact */
-
 /* Footer */
+
+.footContainer {
+    width: 95%;
+    height: 450px;
+    background-color: black;
+    margin: 150px auto 50px auto;
+    line-height: 3;
+}
+
+.footerText {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+
+.footerText2 {
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
 
 /* Resume */
 
