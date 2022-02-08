@@ -101,17 +101,19 @@ nav {
         rgba(242, 92, 92, 1)
     );
     transform: translateY(55%);
-    transition: transform 300ms ease;
-}
-
-.card-content > * {
-    opacity: 0;
-    transition: opacity 300ms linear;
+    transition: transform 500ms ease;
 }
 
 .card:hover .card-content {
     transform: translateY(0);
+    /* transition-delay: 200ms;  */
 }
+
+.card-content > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
 
 .card:hover .card-content > * {
     opacity: 1;
@@ -134,7 +136,7 @@ nav {
     transform: scaleX(0);
 
     transform-origin: left;
-    transition: transform 300ms ease;
+    transition: transform 500ms ease;
 }
 
 .card:hover .card-title::after {
