@@ -14,11 +14,11 @@ Overlay Colors: #F25C5C at 65%
 }
 
 ::-webkit-scrollbar {
-  width: 1em;
+  width: 0.6em;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #f25c5c;
   border: 0.3em solid #f25c5c;
   border-radius: 100vw;
   height: 1px;
@@ -107,15 +107,15 @@ nav {
 /* About */
 
 .about {
-  max-width: 800px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15%;
   line-height: 2;
   color: #f25c5c;
   font-size: 20px;
+  font-weight: 300;
 }
-
 
 /* Work */
 
@@ -388,9 +388,8 @@ nav {
 /* Mobile Build */
 
 @media (max-width: 872px) {
-
-  nav{
-    gap:35px;
+  nav {
+    gap: 35px;
   }
   .workRow1,
   .workRow2 {
@@ -410,10 +409,10 @@ nav {
   }
 
   .aboutContainer {
-    max-width: 315px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
+    /* text-align: justify; */
   }
 
   .card-title {
