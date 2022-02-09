@@ -13,6 +13,17 @@ Overlay Colors: #F25C5C at 65%
   /* box-sizing: border-box; */
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border: 0.3em solid #f25c5c;
+  border-radius: 100vw;
+  height: 1px;
+}
+
 body {
   font-family: "sora", sans-serif;
 }
@@ -56,7 +67,7 @@ nav {
   z-index: -1;
   margin-left: 2%;
   /* margin-top: 2%; */
-  animation: bg-animation 7s ease-in-out infinite alternate;
+  animation: bg-animation 3s ease-in-out infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -69,12 +80,13 @@ nav {
 }
 
 .heroText {
+  display: flex;
   font-family: "Sora", sans-serif;
   font-size: 130px;
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  width: 415px;
+  /* width: 350px; */
   height: 251px;
 }
 
@@ -82,15 +94,28 @@ nav {
   color: #f25c5c;
 }
 
+.period2 {
+  border-radius: 100vw;
+  height: 20px;
+  width: 20px;
+  background-size: 400%;
+  background-image: linear-gradient(to right, #f25c5c, #f4d46c);
+  margin-top: 65.5%;
+  animation: bg-animation 3s ease-in-out infinite alternate;
+}
+
 /* About */
 
-/* .about {
-  display: flex;
-  justify-content: center;
+.about {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15%;
-  line-height: 1.5;
+  line-height: 2;
   color: #f25c5c;
-} */
+  font-size: 20px;
+}
+
 
 /* Work */
 
@@ -119,6 +144,7 @@ nav {
   color: white;
   background-image: url(/images/christian.jpg);
   background-size: cover;
+  background-position: center;
   padding: 12rem 0 0;
   border-radius: 0.35rem;
   overflow: hidden;
@@ -135,6 +161,7 @@ nav {
   color: white;
   background-image: url(/images/viciouscycles2.png);
   background-size: cover;
+  background-position: center;
   padding: 12rem 0 0;
   border-radius: 0.35rem;
   overflow: hidden;
@@ -151,6 +178,7 @@ nav {
   color: white;
   background-image: url(/images/scrib2.png);
   background-size: cover;
+  background-position: center;
   padding: 12rem 0 0;
   border-radius: 0.35rem;
   overflow: hidden;
@@ -167,6 +195,7 @@ nav {
   color: white;
   background-image: url(/images/todo2.png);
   background-size: cover;
+  background-position: center;
   padding: 12rem 0 0;
   border-radius: 0.35rem;
   overflow: hidden;
@@ -237,7 +266,7 @@ nav {
 }
 
 .card-body {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* if primary device can hover do this if not the animation will have been done already */
@@ -359,6 +388,10 @@ nav {
 /* Mobile Build */
 
 @media (max-width: 872px) {
+
+  nav{
+    gap:35px;
+  }
   .workRow1,
   .workRow2 {
     flex-direction: column;
@@ -366,7 +399,8 @@ nav {
 
   .heroText {
     font-size: 100px;
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   nav {
@@ -375,8 +409,20 @@ nav {
     justify-content: center;
   }
 
+  .aboutContainer {
+    max-width: 315px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+
   .card-title {
     font-size: 29px;
+    margin-bottom: 7px;
+  }
+
+  #christian {
+    font-size: 18px;
   }
 
   .footContainer {
@@ -386,5 +432,22 @@ nav {
 
   .footerMail {
     font-size: 26px;
+  }
+
+  .card,
+  .card2,
+  .card3,
+  .card4 {
+    line-height: 1.5;
+  }
+
+  .card-body {
+    margin-bottom: 6px;
+  }
+
+  .period2 {
+    margin-top: 66%;
+    height: 15px;
+    width: 15px;
   }
 }
