@@ -13,7 +13,7 @@ Overlay Colors: #F25C5C at 65%
   /* box-sizing: border-box; */
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.6em;
 }
 
@@ -22,7 +22,7 @@ Overlay Colors: #F25C5C at 65%
   border: 0.3em solid #f25c5c;
   border-radius: 100vw;
   height: 1px;
-}
+} */
 
 body {
   font-family: "sora", sans-serif;
@@ -35,7 +35,7 @@ main {
 /* Hero */
 nav {
   display: flex;
-  justify-content: end;
+  -webkit-justify-content: flex-end;
   gap: 80px;
   padding: 30px 20px 20px 20px;
   margin-right: 50px;
@@ -95,7 +95,7 @@ nav {
 }
 
 .period2 {
-  border-radius: 100vw;
+  /* border-radius: 100vw; */
   height: 20px;
   width: 20px;
   background-size: 400%;
@@ -110,21 +110,31 @@ nav {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15%;
-  line-height: 2;
+  margin-top: 1.5%;
+  line-height: 1.6;
   color: #f25c5c;
   font-size: 20px;
   font-weight: 300;
 }
 
+.aboutText {
+  display: flex;
+  justify-content: center;
+  font-family: "sora", sans-serif;
+  font-size: 48px;
+  margin-top: 270px;
+}
+
 /* Work */
+
+
 
 .workText {
   display: flex;
   justify-content: center;
   font-family: "sora", sans-serif;
   font-size: 48px;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .workRow1,
@@ -406,6 +416,11 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
+  }
+
+  .aboutText {
+    margin-bottom: 30px;
+    margin-top: 150px;
   }
 
   .aboutContainer {
